@@ -1,0 +1,63 @@
+[project]
+name = "construction-archive-backend"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    # Web framework
+    "fastapi>=0.111",
+    "uvicorn[standard]>=0.30",
+    "python-multipart>=0.0.9",
+
+    # Config
+    "pydantic-settings>=2.3",
+    "pydantic>=2.7",
+
+    # Database (async)
+    "sqlalchemy>=2.0",
+    "asyncpg>=0.29",
+    "alembic>=1.13",
+
+    # Vector DB
+    "qdrant-client>=1.9",
+
+    # PDF processing
+    "pymupdf>=1.24",
+    "pyvips>=2.2",
+
+    # AI / ML
+    "openai>=1.35",
+    "colpali-engine>=0.3",
+    "fastembed>=0.3",
+    "torch>=2.3",
+    "transformers>=4.42",
+    "pillow>=10.4",
+
+    # Azure OCR
+    "azure-ai-documentintelligence>=1.0",
+
+    # Graph
+    "networkx>=3.3",
+
+    # Computer vision (Phase 4)
+    "opencv-python-headless>=4.10",
+    "scikit-image>=0.24",
+    "numpy>=1.26",
+
+    # Task queue
+    "celery[redis]>=5.4",
+
+    # Utilities
+    "python-dotenv>=1.0",
+    "httpx>=0.27",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.2",
+    "pytest-asyncio>=0.23",
+    "httpx>=0.27",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
